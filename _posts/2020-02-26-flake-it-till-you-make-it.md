@@ -9,7 +9,7 @@ tags: [books, test]
 author: The LMCache Team2
 ---
 
-# LMCache: A CDN for Fast RAG with Composable Knowledge
+# <img src="./lmcache-logo-small.png" alt="Icon" style="width:160px; vertical-align:middle;">: A CDN for Fast RAG with Composable Knowledge
 
 **LMCache team**
 
