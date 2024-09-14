@@ -1,0 +1,55 @@
+---
+layout: post
+title: First tryout
+subtitle: Excerpt from Soulshaping by Jeff Brown
+cover-img: ./lmcache-logo-small.png
+thumbnail-img: ./lmcache-logo-small.png
+share-img: ./lmcache-logo-small.png
+tags: [books, test]
+author: The LMCache Team
+---
+
+# <img src="./lmcache-logo-small.png" alt="Icon" style="width:190px; vertical-align:middle;">: A CDN for Fast RAG with Composable Knowledge
+
+**LMCache Team**
+
+**TL; DR:** Trubocharging vLLM with 7x faster access with 100x more KV caches.
+
+Large Language Models (LLMs) have become ubiquitous across industries, but when using LLMs together with long documents, it takes forever for the first token to come out. Here comes LMCache, a novel system developed in UChicago that allows the first token to come out ??x faster by efficiently managing long documents (and other sources of knowledge) for you.
+
+<div align="center">
+<img src="./lmcache-diagram.png" alt="Icon" style="width:700px; vertical-align:middle;">
+</div>
+
+## What is LMCache?
+
+No matter how smart LLMs become, they will still need to read new texts and other external data, but doing so is very slow and costly.  
+LMCache drastically reduces this cost by letting LLMs read each text only once. By storing the KV caches (the LLM-usable representation) of all reusable texts, LMCache can reuse the KV caches of any reused text (not necessarily the prefix) in any serving engine instance. By combining LMCache with vLLM, LMCache reduces time to the first token (TTFT) by 3-10x and saves the GPU cycle reduction in many LLM use cases, including multi-round QA and RAG.
+
+<div align="center">
+<img src="./lmcache-gain-short.png" alt="Icon" style="width:700px; vertical-align:middle;">
+</div>
+
+Developed at UChicago, this solution is already gaining significant interest from industry partners.
+
+## The Secret Sauces
+At its core, LMCache uses two core techniques.
+
+- **CacheGen** [SIGCOMM'24](https://arxiv.org/abs/2310.07240) efficiently encodes KV caches into bitstreams and stores them on disks.
+This allows unlimited amount of KV caches to be stored on cheap disks and be shared across multiple vLLM instances. 
+It is in contrast with vLLM which stores KV caches only in one LLM instance's internal GPU and CPU memory.
+This capability is pressingly needed in multiple-round chat apps that use many vLLM instances to serve many users. 
+
+
+- **CacheBlend** [EuroSys'25](https://arxiv.org/abs/2405.16444) blends KV caches with minimum computation to preserve cross-attention. 
+This allows multiple KV caches to be composed together to dynamically form a new KV cache.
+In contrast, vLLM only reuses the KV cache of the input prefix.
+This is particularly useful for RAG applications where multiple reused texts constitute the LLM input.
+
+<!--- CacheGen [SIGCOMM'24](https://arxiv.org/abs/2310.07240): A KV-cache compression system that encodes KV caches into compact bitstreams.-->
+<!--- CacheBlend [EuroSys'25](https://arxiv.org/abs/2405.16444): A KV-cache blending system that dynamically composes new KV caches from smaller ones.-->
+
+|         | Unlimited KV-cache storage | Shared across serving engines? | Non-prefix KV cache |
+|---------|----------------------------|--------------------------------|--------------------|
+| vLLM    |       ✖️                    |                    ✖️         | ✖️                  |
+| LMCache |       ✔️                    |                    ✔️           | ✔️                  |
