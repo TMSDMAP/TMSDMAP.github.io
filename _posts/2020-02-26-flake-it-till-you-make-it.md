@@ -15,8 +15,9 @@ author: The LMCache Team2
 
 **TL; DR:** Trubocharging vLLM with 7x faster access with 100x more KV caches.
 
-
 Large Language Models (LLMs) have become ubiquitous across industries, but when using LLMs together with long documents, it takes forever for the first token to come out. Here comes LMCache, a novel system developed in UChicago that allows the first token to come out ??x faster by efficiently managing long documents (and other sources of knowledge) for you.
+
+![LMCache Diagram](./lmcache_diagram.pdf)
 
 ## What is LMCache?
 
