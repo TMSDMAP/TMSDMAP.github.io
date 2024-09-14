@@ -1,7 +1,7 @@
 ---
 layout: post
-title: First tryout
-subtitle: Excerpt from Soulshaping by Jeff Brown
+title: LMCache A CDN for Fast RAG with Composable Knowledge
+subtitle: Trubocharging vLLM with 7x faster access with 100x more KV caches.
 cover-img: ./lmcache-logo-small.png
 thumbnail-img: ./lmcache-logo-small.png
 share-img: ./lmcache-logo-small.png
