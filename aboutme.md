@@ -5,5 +5,5 @@ title: About Us
 
 We are a team of researchers from UChicago focusing on developing LMCache.
 
-Contact us at [lmcacheteam\@gmail.com](mailto:lmcacheteam@gmail.com)
+Contact us at [lmcacheteam@gmail.com](mailto:lmcacheteam@gmail.com)
 
