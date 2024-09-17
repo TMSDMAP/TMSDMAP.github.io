@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About us
+title: About Us
 ---
 
 We are a team of researchers from UChicago focusing on developing LMCache.
