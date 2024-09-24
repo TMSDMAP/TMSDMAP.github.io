@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vLLM user? Get 100x KV cache storage by only chaninging one line of code"
+title: "vLLM user? Get 100x KV cache storage by chaninging one line of code"
 thumbnail-img: /assets/img/lmcache-pip.png
 share-img: /assets/img/lmcache-pip.png
 author: LMCache Team
@@ -26,7 +26,7 @@ For offline inference, you can use LMCache within two steps:
 First run
 
 ```bash
-pip install lmcache, lmcache_vllm
+pip install lmcache lmcache_vllm
 ```
 
 And then change 
@@ -82,20 +82,20 @@ If you prefer using vLLM through its OpenAI API server, you can also use LMCache
 
 First run
 ```bash
-pip install lmcache, lmcache-vllm
+pip install lmcache lmcache_vllm
 ```
-and then replace, for example, 
+and then replace `vllm serve` to `lmcache_vllm serve`.
+For example, you can change
 ```bash
-vllm serve meta-llama/Meta-Llama-3.1-8B --port 8000
+vllm serve lmsys/longchat-7b-16k --gpu-memory-utilization 0.8
 ```
-by
+to
 ```bash
-lmcache_vllm serve meta-llama/Meta-Llama-3.1-8B --port 8000
+lmcache_vllm serve lmsys/longchat-7b-16k --gpu-memory-utilization 0.8
 ```
 and now your lmcache-augmented vLLM server is up and ready for use!
 
 <br>
-<be>
 
 ## Contact Us
 
