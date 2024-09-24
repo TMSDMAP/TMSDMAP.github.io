@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vLLM user? Get 100x KV cache storage by chaninging one line of code"
+title: "vLLM user? Change just ONE line of code to unlock 100x more KV cache storage power!"
 thumbnail-img: /assets/img/lmcache-pip.png
 share-img: /assets/img/lmcache-pip.png
 author: LMCache Team
@@ -15,6 +15,7 @@ image: /assets/img/lmcache-pip.png
 <!-- ------------ -->
 
 <!-- <span style="font-size:1.3em; color=red;">**TL;DR:** <img src="/assets/img/lmcache-logo-small.png" alt="Icon" style="width:150px; vertical-align:middle;"> *turboboosts vLLM with <span style="font-size:1.3em; color=red;">**7×**</span> faster access to <span style="font-size:1.3em; color=red;">**100×**</span> more KV caches.*</span> -->
+
 
 Are you a vLLM user? Get 100x more KV cache storage space for your multi-round conversation and document QA using LMCache! 
 
