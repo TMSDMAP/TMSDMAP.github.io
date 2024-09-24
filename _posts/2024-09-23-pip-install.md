@@ -30,10 +30,6 @@ simply change
 to
 """
 from lmcache_vllm import vllm
-
-import vllm
-
-
 """
 and you are good to go!
 """
@@ -57,11 +53,9 @@ for output in outputs:
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 ```
 
-If you use vLLM's OpenAI API server, you can:
+If you use vLLM's OpenAI API server, you can also use LMCache within 2 steps:
 - Step 1: `pip install lmcache, lmcache-vllm`
 - Step 2: Replace `vllm serve` by `lmcache_vllm serve` and keep all other command line arguments the same.
-
-And now you are good to go!
 
 <br>
 <be>
