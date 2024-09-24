@@ -16,10 +16,32 @@ image: /assets/img/lmcache-pip.png
 
 <!-- <span style="font-size:1.3em; color=red;">**TL;DR:** <img src="/assets/img/lmcache-logo-small.png" alt="Icon" style="width:150px; vertical-align:middle;"> *turboboosts vLLM with <span style="font-size:1.3em; color=red;">**7×**</span> faster access to <span style="font-size:1.3em; color=red;">**100×**</span> more KV caches.*</span> -->
 
-Are you a vLLM user? Get 100x more KV cache storage space for your multi-round conversation and document QA using LMCache! Just two steps:
+Are you a vLLM user? Get 100x more KV cache storage space for your multi-round conversation and document QA using LMCache! 
 
-- Step 1: `pip install lmcache, lmcache-vllm`
-- Step 2: change `import vllm` to `from lmcache_vllm import vllm` and you are good to go! 
+
+## Offline inference
+
+For offline inference, you can use LMCache within two steps:
+
+First run
+
+```bash
+pip install lmcache, lmcache_vllm
+```
+
+And then change 
+
+```python
+import vllm
+``` 
+
+to
+
+```python
+from lmcache_vllm import vllm
+```
+
+and now you are good to go! 
 
 Like in the following example
 
@@ -53,9 +75,24 @@ for output in outputs:
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 ```
 
-If you use vLLM's OpenAI API server, you can also use LMCache within 2 steps:
-- Step 1: `pip install lmcache, lmcache-vllm`
-- Step 2: Replace `vllm serve` by `lmcache_vllm serve` and keep all other command line arguments the same.
+
+## Online serving
+
+If you prefer using vLLM through its OpenAI API server, you can also use LMCache within 2 steps:
+
+First run
+```bash
+pip install lmcache, lmcache-vllm
+```
+and then replace, for example, 
+```bash
+vllm serve meta-llama/Meta-Llama-3.1-8B --port 8000
+```
+by
+```bash
+lmcache_vllm serve meta-llama/Meta-Llama-3.1-8B --port 8000
+```
+and now your lmcache-augmented vLLM server is up and ready for use!
 
 <br>
 <be>
