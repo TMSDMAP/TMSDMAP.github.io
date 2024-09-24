@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vLLM user? Change just ONE line of code to unlock 100x more KV cache storage power!"
+title: "Are you a vLLM user? Change just ONE line of code to unlock 100x more KV cache storage power!"
 thumbnail-img: /assets/img/lmcache-pip.png
 share-img: /assets/img/lmcache-pip.png
 author: LMCache Team
