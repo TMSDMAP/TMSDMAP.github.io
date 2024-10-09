@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "How LMCache Speeds Up RAG by 4.5x By One Line of Change"
-thumbnail-img: /assets/img/lmcache-blog1.png
-share-img: /assets/img/lmcache-blog1.png
+thumbnail-img: /assets/img/cacheblend-snapshot.png
+share-img: /assets/img/cacheblend-snapshot.png
 author: LMCache Team
-image: /assets/img/lmcache-blog1.png
+image: /assets/img/cacheblend-snapshot.png
 ---
 <br>
 
