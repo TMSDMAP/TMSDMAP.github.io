@@ -31,7 +31,6 @@ But while RAG enhances the quality of LLM outputs, it isn’t perfect---**speed*
 <img src="/assets/img/cacheblend-fig1.png" alt="Icon" style="width:600px; vertical-align:middle;">
 </div>
 
-<br>
 
 The biggest hurdle for RAG systems lies in the delay of processing the  multiple text chunks in the LLM’s input. 
 This is because the model needs to compute the KV caches for each token in the input before the first token is generated.
@@ -39,7 +38,6 @@ This is because the model needs to compute the KV caches for each token in the i
 What’s worse, in RAG, *the traditional prefix-based KV caching can be almost as slow as doing no caching at all*.
 This is because the multiple input text chunks are selected dynamically, so when they are concatenated in the input, all of them (except the first one) will NOT be the prefix.
 
-<br>
 
 ## How LMCache Speeds Up RAG
 
