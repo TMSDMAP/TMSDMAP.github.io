@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How LMCache Speeds Up RAG by 4.5x By One Line of Change"
+title: "Beyond Prefix Caching! How LMCache Speeds Up RAG by 4.5x By One Line of Change"
 thumbnail-img: /assets/img/cacheblend-snapshot.png
 share-img: /assets/img/cacheblend-snapshot.png
 author: LMCache Team
