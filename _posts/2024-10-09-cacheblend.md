@@ -50,9 +50,9 @@ Here’s where LMCache's *CacheBlend* technique changes the game.
 CacheBlend can reuse KV caches from **all** chunks—whether they are the prefix or not, while maintaining generation quality. 
 In other words, the KV cache of EACH text chunk in the RAG database is individually pre-computed and stored.
 When a query arrives, the RAG search engine first identifies N relevant text chunks for the LLM to read.
-Instead of pretending the texts to the LLM input, CacheBlend feeds their N KV caches to the LLM. 
+Instead of pretending the texts to the LLM input, *CacheBlend feeds their N KV caches to the LLM*. 
 
-A naive implementation of this idea will break the semantics since the cross-attention between these chunks is not preserved in the KV caches as they are individually computed. 
+A naive implementation of this idea will break the semantics since the **cross-attention** between these chunks is not preserved in the KV caches as they are individually computed. 
 CacheBlend avoids degrading the quality by selectively recomputing the KV cache of a *small* set of *critical tokens*. 
 In the meantime, the small extra delay for recomputing some tokens can be pipelined with the retrieval of KV caches. 
 In this way, CacheBlend significantly speeds up the TTFT by up to **4.5X** (~15% recomputation on non-prefix KV caches). 
