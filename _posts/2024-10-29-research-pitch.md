@@ -12,9 +12,9 @@ image: /assets/img/lmcache_research.png
 <img src="/assets/img/lmcache_research.png" alt="Icon" style="width: 80%; vertical-align:middle;">
 </div>
 
-🚀 Building your system on KV cache? Try building it on [LMCache](https://github.com/LMCache/LMCache)! We make it compatible with vLLM — effortlessly!
+🚀 Building your system on KV cache? Try building it on [LMCache](https://github.com/LMCache/LMCache)! 
 
-LMCache is here to simplify your life: focus on KV cache management, while we handle all the vLLM integration and compatibility work.
+By using LMCache for your research, you can focus on KV cache management, while we handle all the vLLM integration and compatibility for you.
 
 
 Here’s why LMCache works as your research testbed:
@@ -23,3 +23,5 @@ Here’s why LMCache works as your research testbed:
 - Showcase your impact, fast. Implement in LMCache, and your research is instantly runnable with vLLM. Plus, we have rich demos for you to showcase your system in conference talks or presentations.
 
 Check our [codebase](https://github.com/LMCache/LMCache) and [documentations](https://docs.lmcache.ai/) for more information!
+
+Update: we are delighted to see that there are already papers (like [Cake](https://arxiv.org/pdf/2410.03065v1)) start to use LMCache as their research testbed.
