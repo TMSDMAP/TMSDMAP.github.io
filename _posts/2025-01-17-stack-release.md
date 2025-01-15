@@ -62,7 +62,7 @@ At a high level:
 # Advantage #1: Performance Benchmarking
 Our preliminary tests show LLM Stack outperforms other setups across key metrics. (Exact numbers to be filled in later.)
 
-# Advantage #1: Easy Deployment
+# Advantage #2: Easy Deployment
 ```bash
 Example code
 ```
