@@ -32,9 +32,9 @@ It’s quickly becoming critical infrastructure, much like the cloud was to big 
 How do we extend its power into a **full-stack** inference system that any organization can deploy at scale with *high reliability*, *high throughput*, and *low latency*? That’s precisely why we built **LLM Stack**.
 
 
-# Introduce LLM Stack
+# Introduce "*LLM Stack*"
 **LLM Stack** is an open-source **reference implementation** of a **inference stack** built on top of vLLM, designed to run seamlessly on a cluster of GPU nodes. It adds four critical functionalities that complement vLLM’s native strengths:
-- **KV cache sharing & storage** to speed up inference when context is reused (powered by the popular LMCache).
+- **KV cache sharing & storage** to speed up inference when context is reused (powered by the popular [**LMCache**](https://github.com/LMCache/LMCache) project).
 - **Prefix-aware routing** that sends queries to the vLLM instance already holding the relevant context KV cache.
 - **Observability** of individual engine status and query-level metrics (TTFT, TBT, throughput).
 - **Autoscaling** to handle dynamics of workloads.
