@@ -59,13 +59,17 @@ At a high level:
 <img src="/assets/img/stack-overview.png" alt="Icon" style="width: 90%; vertical-align:middle;">
 </div>
 
-# Advantage #1: Performance Benchmarking
-Our preliminary tests show LLM Stack outperforms other setups across key metrics. (Exact numbers to be filled in later.)
-
-# Advantage #2: Easy Deployment
+# Advantage #1: Easy Deployment
 ```bash
 Example code
 ```
+
+# Advantage #2: Performance Benchmarking
+Our preliminary tests show LLM Stack outperforms other setups across key metrics. (Exact numbers to be filled in later.)
+
+# Advantage #3: Effortless Monitoring
+Observability panel
+
 
 ## Conclusion
 We’re thrilled to unveil **LLM Stack**—the next step in transforming vLLM from a best-in-class single-node engine into a full-scale LLM serving system. 
