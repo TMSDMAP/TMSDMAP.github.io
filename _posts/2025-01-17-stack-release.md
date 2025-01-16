@@ -70,7 +70,7 @@ helm upgrade --install vllm-stack <Helm chart url>
 # <Helm chart url> can be something like https://vllm-project.github.io/stack-helm-charts
 ```
 
-# Advantage #2: Performance Benchmarking
+# Advantage #2: Better Performance
 Our preliminary tests show LMStack outperforms other setups across key metrics. 
 
 <div align="center">
