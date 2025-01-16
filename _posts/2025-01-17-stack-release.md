@@ -92,6 +92,12 @@ If you’re as excited as we are, don’t wait!
 - **Clone the repo: [Link]**
 - **Kick the tires**
 - **Let us know what you think!**
-Join us, and let’s build a future where every application can harness the power of LLM inference—reliably, at scale, and without breaking a sweat.
 
+Join us, and let’s build a future where every application can harness the power of LLM inference—reliably, at scale, and without breaking a sweat.
 *Happy deploying!*
+
+Contacts:
+- **vLLM slack channel [link]()**
+- **LMCache slack channel [link]()**
+- **vLLM repository [link] ()**
+- **LMCache repository [link]()**
