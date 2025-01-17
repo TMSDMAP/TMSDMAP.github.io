@@ -14,7 +14,7 @@ image: /assets/img/stack-thumbnail.png
 - **Today, we release “LMStack”**, a vLLM-based full inference stack that introduces two major advantages:
   - **10x better performance** (3-10x lower response delay & 2-5x higher throughput) with prefix-aware request routing and KV-cache sharing.
   - **Easy cluster deployment** with built-in support for fault tolerance, autoscaling, and observability.
-- And the best part? It’s **open-source**—so everyone can get started right away! [**Repo link in vLLM-project**]
+- And the best part? It’s **open-source**—so everyone can get started right away! [[**CODE**]](https://github.com/vllm-project/lmstack)
 
 
 # The Context
