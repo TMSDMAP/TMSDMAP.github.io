@@ -91,7 +91,8 @@ We believe LMStack will open new doors for organizations seeking to build, test,
 If you’re as excited as we are, don’t wait!
 - **Clone the repo: [Link]()**
 - **Kick the tires**
-- **Let us know what you think! [Interest Form](https://forms.gle/mQfQDUXbKfp2St1z7)**
+- **Let us know what you think!**
+- **[Interest Form](https://forms.gle/mQfQDUXbKfp2St1z7)**
 
 
 Join us to build a future where every application can harness the power of LLM inference—reliably, at scale, and without breaking a sweat.
