@@ -89,7 +89,7 @@ We’re thrilled to unveil **LMStack**—the next step in transforming vLLM from
 We believe LMStack will open new doors for organizations seeking to build, test, and deploy LLM applications at scale without sacrificing performance or simplicity.
 
 If you’re as excited as we are, don’t wait!
-- **Clone the repo: [Link]**
+- **Clone the repo: [Link]()**
 - **Kick the tires**
 - **Let us know what you think!**
 
@@ -97,7 +97,7 @@ Join us, and let’s build a future where every application can harness the powe
 *Happy deploying!*
 
 Contacts:
-- **vLLM slack channel [link]()**
-- **LMCache slack channel [link]()**
-- **vLLM repository [link] ()**
-- **LMCache repository [link]()**
+- **vLLM slack channel [link](https://slack.vllm.ai/)**
+- **LMCache slack channel [link](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ)**
+- **vLLM repository [link](https://github.com/vllm-project/vllm)**
+- **LMCache repository [link](https://github.com/LMCache/LMCache)**
