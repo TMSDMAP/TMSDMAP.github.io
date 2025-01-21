@@ -20,7 +20,7 @@ image: /assets/img/stack-thumbnail.png
 # The Context
 <!-- Over the past year, LLM inference has raced to the forefront, powering everything from chatbots to code assistants and beyond. It’s quickly becoming critical infrastructure, much like the cloud was to big data, cellular was to mobile apps, and CDNs were (and still are!) to the broader Internet. -->
 
-*In the AI arms race, it’s no longer just about who has the best model—it’s about **who has the best LLM inference system**.*
+*In the AI arms race, it’s no longer just about who has the best model—it’s about **who has the best LLM serving system**.*
 
 **vLLM** has taken the open-source community by storm, with unparalleled hardware and model support plus an active ecosystem of top-notch contributors. But until now, vLLM has mostly focused on **single-node** deployments.
 
