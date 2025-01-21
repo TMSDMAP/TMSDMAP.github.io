@@ -30,7 +30,7 @@ How do we extend its power into a **full-stack** inference system that any organ
 <img src="/assets/img/stack-thumbnail.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
 
-# Introduce "*LMStack*"
+# Introducing "*LMStack*"
 **LMStack** is an open-source **reference implementation** of a **inference stack** built on top of vLLM, designed to run seamlessly on a cluster of GPU nodes. It adds four critical functionalities that complement vLLM’s native strengths:
 - **KV cache sharing & storage** to speed up inference when context is reused (powered by the popular [**LMCache**](https://github.com/LMCache/LMCache) project).
 - **Prefix-aware routing** that sends queries to the vLLM instance already holding the relevant context KV cache.
