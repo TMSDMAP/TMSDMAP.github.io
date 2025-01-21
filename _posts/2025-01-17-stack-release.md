@@ -48,8 +48,8 @@ Below is a quick snapshot comparing LMStack with its closest counterparts:
 The LMStack architecture builds on top of vLLM’s powerful single-node engine to provide a cluster-wide solution. 
 
 At a high level:
-- Clients send LLM inference requests.
-- Prefix-aware routing checks if the requested context is already cached somewhere, then forwards the request to the node with the relevant cache.
+- Applications send LLM inference requests.
+- Prefix-aware routing checks if the requested context is already cached within the memory pool of one instance. It then forwards the request to the node with the pre-computed cache.
 - Autoscaling and a cluster manager watch the overall load and spin up new vLLM nodes if needed.
 - Observability modules gather metrics like TTFT (Time-To-First-Token), TBT (Time-Between-Tokens), and throughput, giving you real-time insights into your system’s health.
 
