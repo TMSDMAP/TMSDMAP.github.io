@@ -59,7 +59,7 @@ At a high level:
 
 # Advantage #1: Easy Deployment
 
-You can helm chart to deploy the LMStack to your k8s cluster via a single command:
+Use helm chart to deploy the LMStack to your k8s cluster through running a single command:
 ```bash
 sudo helm repo add lmstack-repo https://lmcache.github.io/helm/ && \
     sudo helm install lmstack lmstack-repo/lmstack
