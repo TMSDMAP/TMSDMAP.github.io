@@ -41,7 +41,7 @@ How do we extend its power into a **full-stack** inference system that any organ
 
 Below is a quick snapshot comparing LMStack with its closest counterparts:
 <div align="center">
-<img src="/assets/img/stack-table.png" alt="Icon" style="width: 70%; vertical-align:middle;">
+<img src="/assets/img/stack-table.png" alt="Icon" style="width: 90%; vertical-align:middle;">
 </div>
 
 ### The Design
