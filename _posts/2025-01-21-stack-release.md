@@ -74,6 +74,7 @@ The results show LMStack outperforms other setups across key metrics (time to fi
 <div align="center">
 <img src="/assets/img/stack-perf-ttft.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
+
 <div align="center">
 <img src="/assets/img/stack-perf-itl.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
