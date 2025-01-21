@@ -59,21 +59,23 @@ At a high level:
 
 # Advantage #1: Easy Deployment
 
-Requirement: 
-- kubernetes environment (local or cloud)
-- GPU
-- (Optional) PersistentVolume which contains the model weights
-  - If not present, vLLM pods will download the model weights themselves
+You can helm chart to deploy the LMStack to your k8s cluster via a single command:
 ```bash
-helm upgrade --install vllm-stack <Helm chart url> 
-# <Helm chart url> can be something like https://vllm-project.github.io/stack-helm-charts
+sudo helm repo add lmstack-repo https://lmcache.github.io/helm/ && \
+    sudo helm install lmstack lmstack-repo/lmstack
 ```
 
+For more details, please refer to the detailed README at [LMStack repo](https://github.com/LMCache/LMStack/blob/main/README.md). [Tutorials](https://github.com/LMCache/LMStack/tree/main/tutorials) about setting up k8s cluster and customizing helm charts are also available.
+
 # Advantage #2: Better Performance
-Our preliminary tests show LMStack outperforms other setups across key metrics. 
+We conduct a benchmark of multi-round Q&A workload on LMStack and other setups, including vLLM + KServe and an commercial endpoint service.
+The results show LMStack outperforms other setups across key metrics (time to first token and inter token latency). 
 
 <div align="center">
-<img src="/assets/img/stack-perf.png" alt="Icon" style="width: 60%; vertical-align:middle;">
+<img src="/assets/img/stack-perf-ttft.png" alt="Icon" style="width: 60%; vertical-align:middle;">
+</div>
+<div align="center">
+<img src="/assets/img/stack-perf-itl.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
 
 # Advantage #3: Effortless Monitoring
