@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Enabling High Performance and Easy Deployment of vLLM with “LMStack”"
+title: "High Performance and Easy Deployment of vLLM in K8S with “LMStack”"
 thumbnail-img: /assets/img/stack-thumbnail.png
 share-img: /assets/img/stack-thumbnail.png
 author: LMCache Team
@@ -77,7 +77,7 @@ Our preliminary tests show LMStack outperforms other setups across key metrics.
 </div>
 
 # Advantage #3: Effortless Monitoring
-Observability panel
+Keep real-time tracking of your LLM inference cluster.
 
 <div align="center">
 <img src="/assets/img/stack-panel.png" alt="Icon" style="width: 70%; vertical-align:middle;">
@@ -93,7 +93,7 @@ If you’re as excited as we are, don’t wait!
 - **Kick the tires**
 - **Let us know what you think!**
 
-Join us, and let’s build a future where every application can harness the power of LLM inference—reliably, at scale, and without breaking a sweat.
+Join us to build a future where every application can harness the power of LLM inference—reliably, at scale, and without breaking a sweat.
 *Happy deploying!*
 
 Contacts:
