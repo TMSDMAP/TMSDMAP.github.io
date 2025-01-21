@@ -98,7 +98,7 @@ Join us to build a future where every application can harness the power of LLM i
 *Happy deploying!*
 
 Contacts:
-- **vLLM slack channel [link](https://slack.vllm.ai/)**
-- **LMCache slack channel [link](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ)**
-- **vLLM repository [link](https://github.com/vllm-project/vllm)**
-- **LMCache repository [link](https://github.com/LMCache/LMCache)**
+- **vLLM [slack](https://slack.vllm.ai/)**
+- **LMCache [slack](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ)**
+- **vLLM [repository](https://github.com/vllm-project/vllm)**
+- **LMCache [repository](https://github.com/LMCache/LMCache)**
