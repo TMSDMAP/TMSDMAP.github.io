@@ -77,7 +77,7 @@ Our preliminary tests show LMStack outperforms other setups across key metrics.
 </div>
 
 # Advantage #3: Effortless Monitoring
-Keep real-time tracking of your LLM inference cluster.
+Keep real-time tracking of your LLM inference cluster with key metrics including latency distributions, number of requests over time, KV cache hit rate.
 
 <div align="center">
 <img src="/assets/img/stack-panel.png" alt="Icon" style="width: 70%; vertical-align:middle;">
