@@ -59,7 +59,7 @@ At a high level:
 
 # Advantage #1: Easy Deployment
 
-Use helm chart to deploy the LMStack to your k8s cluster through running a single command:
+Use helm chart to deploy the production-stack to your k8s cluster through running a single command:
 ```bash
 sudo helm repo add lmstack-repo https://lmcache.github.io/helm/ && \
     sudo helm install lmstack lmstack-repo/lmstack
@@ -68,7 +68,7 @@ sudo helm repo add lmstack-repo https://lmcache.github.io/helm/ && \
 For more details, please refer to the detailed README at [production-stack repo](https://github.com/vllm-project/production-stack). [Tutorials](https://github.com/LMCache/LMStack/tree/main/tutorials) about setting up k8s cluster and customizing helm charts are also available.
 
 # Advantage #2: Better Performance
-We conduct a benchmark of multi-round Q&A workload on LMStack and other setups, including vLLM + KServe and an commercial endpoint service.
+We conduct a benchmark of multi-round Q&A workload on production-stack and other setups, including vLLM + KServe and an commercial endpoint service.
 The results show production-stack outperforms other setups across key metrics (time to first token and inter token latency). 
 
 <div align="center">
@@ -89,7 +89,7 @@ Keep real-time tracking of your LLM inference cluster with key metrics including
 
 ## Conclusion
 We’re thrilled to unveil **production-stack**—the next step in transforming vLLM from a best-in-class single-node engine into a full-scale LLM serving system. 
-We believe LMStack will open new doors for organizations seeking to build, test, and deploy LLM applications at scale without sacrificing performance or simplicity.
+We believe production-stack will open new doors for organizations seeking to build, test, and deploy LLM applications at scale without sacrificing performance or simplicity.
 
 If you’re as excited as we are, don’t wait!
 - **Clone the repo: [https://github.com/vllm-project/production-stack](https://github.com/vllm-project/production-stack)**
