@@ -62,7 +62,7 @@ At a high level:
 Use helm chart to deploy the vLLM production-stack to your k8s cluster through running a single command:
 ```
 sudo helm repo add llmstack-repo https://lmcache.github.io/helm/ &&\
-sudo helm install llmstack llmstack-repo/vllm-stack -f tutorials/assets/values-01-minimal-example.yaml
+  sudo helm install llmstack llmstack-repo/vllm-stack 
 ```
 
 For more details, please refer to the detailed README at [vLLM production-stack repo](https://github.com/vllm-project/production-stack). [Tutorials](https://github.com/LMCache/LMStack/tree/main/tutorials) about setting up k8s cluster and customizing helm charts are also available.
