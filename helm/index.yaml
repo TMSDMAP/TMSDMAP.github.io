@@ -1,15 +1,15 @@
 apiVersion: v1
 entries:
-  lmstack:
+  vllm-stack:
   - apiVersion: v2
-    created: "2025-01-21T00:37:20.515129492Z"
+    created: "2025-01-22T00:24:45.346504882Z"
     description: The stack deployment of vLLM
-    digest: a2ccbc9b9b2fc5b58fa5f26da295fe51be85c3562273fa0a6c8b53c898fe8fd0
+    digest: 648bfcf04eb1293bb69bbe6b7ce2cb86f24a616c579e475acdbbf91416c26dbe
     maintainers:
     - name: apostac
-    name: lmstack
+    name: vllm-stack
     type: application
     urls:
-    - https://lmcache.github.io/helm/lmstack-0.0.1.tgz
+    - https://lmcache.github.io/helm/vllm-stack-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-21T00:37:20.509530652Z"
+generated: "2025-01-22T00:24:45.341306782Z"
