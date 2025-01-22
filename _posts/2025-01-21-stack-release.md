@@ -92,7 +92,7 @@ We’re thrilled to unveil **LMStack**—the next step in transforming vLLM from
 We believe LMStack will open new doors for organizations seeking to build, test, and deploy LLM applications at scale without sacrificing performance or simplicity.
 
 If you’re as excited as we are, don’t wait!
-- **Clone the repo: [Link](https://github.com/vllm-project/production-stack)**
+- **Clone the repo: [https://github.com/vllm-project/production-stack](https://github.com/vllm-project/production-stack)**
 - **Kick the tires**
 - **Let us know what you think!**
 - **[Interest Form](https://forms.gle/mQfQDUXbKfp2St1z7)**
