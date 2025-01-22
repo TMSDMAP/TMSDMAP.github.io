@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "High Performance and Easy Deployment of vLLM in K8S with “production-stack”"
+title: "High Performance and Easy Deployment of vLLM in K8S with “vLLM production-stack”"
 thumbnail-img: /assets/img/stack-thumbnail.png
 share-img: /assets/img/stack-thumbnail.png
 author: LMCache Team
@@ -11,7 +11,7 @@ image: /assets/img/stack-thumbnail.png
 
 ## TL;DR
 - **vLLM** boasts the largest open-source community, but what does it take to transform vLLM from the best single-node LLM engine to a premier LLM serving system?
-- **Today, we release “production-stack”**, a vLLM-based full inference stack that introduces two major advantages:
+- **Today, we release “vLLM production-stack”**, a vLLM-based full inference stack that introduces two major advantages:
   - **10x better performance** (3-10x lower response delay & 2-5x higher throughput) with prefix-aware request routing and KV-cache sharing.
   - **Easy cluster deployment** with built-in support for fault tolerance, autoscaling, and observability.
 - And the best part? It’s **open-source**—so everyone can get started right away! [[**https://github.com/vllm-project/production-stack**]](https://github.com/vllm-project/production-stack)
@@ -24,14 +24,14 @@ image: /assets/img/stack-thumbnail.png
 
 **vLLM** has taken the open-source community by storm, with unparalleled hardware and model support plus an active ecosystem of top-notch contributors. But until now, vLLM has mostly focused on **single-node** deployments.
 
-How do we extend its power into a **full-stack** inference system that any organization can deploy at scale with *high reliability*, *high throughput*, and *low latency*? That’s precisely why we built **production-stack**.
+How do we extend its power into a **full-stack** inference system that any organization can deploy at scale with *high reliability*, *high throughput*, and *low latency*? That’s precisely why the LMCache team and the vLLM team built **vLLM production-stack**.
 
 <div align="center">
 <img src="/assets/img/stack-thumbnail.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
 
-# Introducing "*production-stack*"
-**Production-stack** is an open-source **reference implementation** of a **inference stack** built on top of vLLM, designed to run seamlessly on a cluster of GPU nodes. It adds four critical functionalities that complement vLLM’s native strengths:
+# Introducing "*vLLM Production-Stack*"
+**vLLM Production-stack** is an open-source **reference implementation** of an **inference stack** built on top of vLLM, designed to run seamlessly on a cluster of GPU nodes. It adds four critical functionalities that complement vLLM’s native strengths:
 - **KV cache sharing & storage** to speed up inference when context is reused (powered by the popular [**LMCache**](https://github.com/LMCache/LMCache) project).
 - **Prefix-aware routing** that sends queries to the vLLM instance already holding the relevant context KV cache.
 - **Observability** of individual engine status and query-level metrics (TTFT, TBT, throughput).
@@ -39,13 +39,13 @@ How do we extend its power into a **full-stack** inference system that any organ
 
 ### Comparison with Alternatives:
 
-Below is a quick snapshot comparing production-stack with its closest counterparts:
+Below is a quick snapshot comparing vLLM production-stack with its closest counterparts:
 <div align="center">
 <img src="/assets/img/stack-table.png" alt="Icon" style="width: 90%; vertical-align:middle;">
 </div>
 
 ### The Design
-The production-stack architecture builds on top of vLLM’s powerful single-node engine to provide a cluster-wide solution. 
+The vLLM production-stack architecture builds on top of vLLM’s powerful single-node engine to provide a cluster-wide solution. 
 
 At a high level:
 - Applications send LLM inference requests.
@@ -59,17 +59,17 @@ At a high level:
 
 # Advantage #1: Easy Deployment
 
-Use helm chart to deploy the production-stack to your k8s cluster through running a single command:
+Use helm chart to deploy the vLLM production-stack to your k8s cluster through running a single command:
 ```bash
 sudo helm repo add lmstack-repo https://lmcache.github.io/helm/ && \
     sudo helm install lmstack lmstack-repo/lmstack
 ```
 
-For more details, please refer to the detailed README at [production-stack repo](https://github.com/vllm-project/production-stack). [Tutorials](https://github.com/LMCache/LMStack/tree/main/tutorials) about setting up k8s cluster and customizing helm charts are also available.
+For more details, please refer to the detailed README at [vLLM production-stack repo](https://github.com/vllm-project/production-stack). [Tutorials](https://github.com/LMCache/LMStack/tree/main/tutorials) about setting up k8s cluster and customizing helm charts are also available.
 
 # Advantage #2: Better Performance
-We conduct a benchmark of multi-round Q&A workload on production-stack and other setups, including vLLM + KServe and an commercial endpoint service.
-The results show production-stack outperforms other setups across key metrics (time to first token and inter token latency). 
+We conduct a benchmark of multi-round Q&A workload on vLLM production-stack and other setups, including vLLM + KServe and an commercial endpoint service.
+The results show vLLM stack outperforms other setups across key metrics (time to first token and inter token latency). 
 
 <div align="center">
 <img src="/assets/img/stack-perf-ttft.png" alt="Icon" style="width: 60%; vertical-align:middle;">
@@ -88,8 +88,8 @@ Keep real-time tracking of your LLM inference cluster with key metrics including
 
 
 ## Conclusion
-We’re thrilled to unveil **production-stack**—the next step in transforming vLLM from a best-in-class single-node engine into a full-scale LLM serving system. 
-We believe production-stack will open new doors for organizations seeking to build, test, and deploy LLM applications at scale without sacrificing performance or simplicity.
+We’re thrilled to unveil **vLLM Production Stack**—the next step in transforming vLLM from a best-in-class single-node engine into a full-scale LLM serving system. 
+We believe the vLL stack will open new doors for organizations seeking to build, test, and deploy LLM applications at scale without sacrificing performance or simplicity.
 
 If you’re as excited as we are, don’t wait!
 - **Clone the repo: [https://github.com/vllm-project/production-stack](https://github.com/vllm-project/production-stack)**
