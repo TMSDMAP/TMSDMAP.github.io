@@ -72,11 +72,11 @@ We conduct a benchmark of multi-round Q&A workload on vLLM production-stack and 
 The results show vLLM stack outperforms other setups across key metrics (time to first token and inter token latency). 
 
 <div align="center">
-<img src="/assets/img/stack-perf-ttft.png" alt="Icon" style="width: 60%; vertical-align:middle;">
+<img src="/assets/img/stack-ttft.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
 
 <div align="center">
-<img src="/assets/img/stack-perf-itl.png" alt="Icon" style="width: 60%; vertical-align:middle;">
+<img src="/assets/img/stack-itl.png" alt="Icon" style="width: 60%; vertical-align:middle;">
 </div>
 
 # Advantage #3: Effortless Monitoring
