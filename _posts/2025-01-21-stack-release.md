@@ -54,7 +54,7 @@ At a high level:
 - Observability modules gather metrics like TTFT (Time-To-First-Token), TBT (Time-Between-Tokens), and throughput, giving you real-time insights into your system’s health.
 
 <div align="center">
-<img src="/assets/img/stack-overview.png" alt="Icon" style="width: 90%; vertical-align:middle;">
+<img src="/assets/img/stack-overview-2.png" alt="Icon" style="width: 90%; vertical-align:middle;">
 </div>
 
 # Advantage #1: Easy Deployment
