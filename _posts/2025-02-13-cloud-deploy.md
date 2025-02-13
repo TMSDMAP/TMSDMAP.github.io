@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Deploying LLMs in Clusters #1: running “vLLM production-stack” on a cloud VM"
-thumbnail-img: /assets/img/stack-thumbnail.png
-share-img: /assets/img/stack-thumbnail.png
+thumbnail-img: https://img.youtube.com/vi/EsTJbQtzj0g/0.jpg
+share-img: https://img.youtube.com/vi/EsTJbQtzj0g/0.jpg
 author: LMCache Team
-image: /assets/img/stack-thumbnail.png
+image: https://img.youtube.com/vi/EsTJbQtzj0g/0.jpg
 ---
 <br>
 
@@ -13,7 +13,10 @@ image: /assets/img/stack-thumbnail.png
 - vLLM boasts the largest open-source community in LLM serving, and **“vLLM production-stack”** offers a vLLM-based full inference stack with **10x** better performance and Easy cluster **management**.
 - Today, we will give a step-by-step demonstration on how to deploy a proof-of-concept **“vLLM production-stack”** in a cloud VM.
 - This is the beginning of our **Deploying LLMs in Clusters** series. We will be rolling out more blogs about serving LLMs with your own infrastructure during the next few weeks. Let us know which topic we should do next! [[poll]](https://forms.gle/cSeqDz1Nm2iwv7eH8)
-[[Github Link]](https://github.com/vllm-project/production-stack) | [[Tutorial Video]](https://www.youtube.com/watch?v=EsTJbQtzj0g&ab_channel=JunchenJiang) | [[More Tutorials]](https://github.com/vllm-project/production-stack/tree/main/tutorials) | [[Interest Form]](https://forms.gle/Jaq2UUFjgvuedRPV8)
+[[Github Link]](https://github.com/vllm-project/production-stack) | [[More Tutorials]](https://github.com/vllm-project/production-stack/tree/main/tutorials) | [[Interest Form]](https://forms.gle/Jaq2UUFjgvuedRPV8)
+
+### [**Tutorial Video** (click below)](https://www.youtube.com/watch?v=EsTJbQtzj0g&ab_channel=JunchenJiang)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/EsTJbQtzj0g/0.jpg)](https://www.youtube.com/watch?v=EsTJbQtzj0g&ab_channel=JunchenJiang)
 
 
 # The Context
@@ -24,15 +27,15 @@ image: /assets/img/stack-thumbnail.png
 
 **vLLM Production-stack** is an open-source **reference implementation** of an **inference stack** built on top of vLLM, designed to run seamlessly on a cluster of GPU nodes. It adds four critical functionalities that complement vLLM’s native strengths.
 
-Below is a quick snapshot comparing vLLM production-stack with its closest counterparts:
+<!-- Below is a quick snapshot comparing vLLM production-stack with its closest counterparts:-->
 <div align="center">
-<img src="/assets/img/stack-table.png" alt="Icon" style="width: 90%; vertical-align:middle;">
+<img src="/assets/img/stack-table.png" alt="Icon" style="width: 70%; vertical-align:middle;">
 </div>
 
 \
 vLLM production-stack offers superior performance than other LLM serving solutions by achieving higher throughput through smart routing and KV cache sharing\:
 <div align="center">
-<img src="/assets/img/stack-ttft.png" alt="Icon" style="width: 60%; vertical-align:middle;">
+<img src="/assets/img/stack-ttft.png" alt="Icon" style="width: 50%; vertical-align:middle;">
 </div>
 
 
@@ -120,7 +123,7 @@ This script installs Minikube. Minikube configures the system to support GPU wor
    ```
 
 
-## Step 2: Deploy the production-stack
+## Step 2: Deploy the production stack with two vLLM instances and a router
 Now you have everything needed, it is time to deploy production-stack! 
 
 First create a yaml file as shown below. Be sure to include your model name, model url, replica-count, and vLLM configurations in the file. Note that the pvcStorage needs be be bigger than the model size.
@@ -154,7 +157,7 @@ And deploy this configuration using Helm:
 
 ```bash
 helm repo add vllm https://vllm-project.github.io/production-stack
-helm install vllm vllm/vllm-stack -f example.yaml
+helm install mystack vllm/vllm-stack -f example.yaml
 ```
 Monitor the deployment status using:
 
@@ -168,8 +171,9 @@ Expected output:
 
 ```plaintext
 NAME                                               READY   STATUS    RESTARTS   AGE
-vllm-deployment-router-859d8fb668-2x2b7        1/1     Running   0          2m38s
-vllm-opt125m-deployment-vllm-84dfc9bd7-vb9bs   1/1     Running   0          2m38s
+mystack-deployment-router-85d4ffc696-xkg67         1/1     Running   0          2m38s
+mystack-opt125m-deployment-vllm-858f4894fc-hfcgg   1/1     Running   0          2m38s
+mystack-opt125m-deployment-vllm-858f4894fc-nt6sl   1/1     Running   0          2m38s
 ```
 
 _Note_: It may take some time for the vLLM instance to become ready!
@@ -177,10 +181,10 @@ _Note_: It may take some time for the vLLM instance to become ready!
 ## Step 3: Send requests and test!  
 #### 3.1: Forward the Service Port
 
-Expose the `vllm-router-service` port to the host machine:
+Expose the `mystack-router-service` port to the host machine:
 
 ```bash
-sudo kubectl port-forward svc/vllm-router-service 30080:80
+sudo kubectl port-forward svc/mystack-router-service 30080:80
 ```
 
 #### 3.2: Query the OpenAI-Compatible API to list the available models
@@ -245,7 +249,7 @@ Expected output:
 To remove the deployment, run:
 
 ```bash
-sudo helm uninstall vllm
+sudo helm uninstall mystack
 ```
 
 ## Conclusion
