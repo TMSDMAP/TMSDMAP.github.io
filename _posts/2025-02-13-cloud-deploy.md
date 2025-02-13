@@ -42,8 +42,11 @@ vLLM production-stack offers superior performance than other LLM serving solutio
 
 # Deploying a "production-stack" demo in the cloud
 In this section, we will go through the general steps to set up the vLLM production-stack service in the cloud. If you prefer watching videos, please follow this [tutorial video](https://www.youtube.com/watch?v=EsTJbQtzj0g&ab_channel=JunchenJiang).
-We use a Lambda GPU instance with an A40 GPU. 
+ 
 ## Step 1: Prepare the machine
+
+In this example, we use a Lambda Labs GPU instance with an A40 GPU, but you can do the same thing with AWS EKS.
+
 ### Install Kubernetes
 1. Clone the repository and navigate to the `utils/` folder:
 
