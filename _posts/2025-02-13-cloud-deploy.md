@@ -128,27 +128,26 @@ First create a yaml file as shown below. Be sure to include your model name, mod
 ### example.yaml
 ```yaml
 servingEngineSpec:
+  runtimeClassName: ""
   modelSpec:
-  - name: "llama3"
+  - name: "opt125m"
     repository: "vllm/vllm-openai"
     tag: "latest"
     modelURL: "facebook/opt-125m"
-    replicaCount: 1
 
-    requestCPU: 10
+    replicaCount: 2
+
+    requestCPU: 6
     requestMemory: "16Gi"
-    requestGPU: 1
+    requestGPU: 0.5
 
-    pvcStorage: "50Gi"
+    pvcStorage: "10Gi"
+    pvcAccessMode:
+      - ReadWriteMany
 
     vllmConfig:
-      enableChunkedPrefill: false
-      enablePrefixCaching: false
-      maxModelLen: 16384
-      dtype: "bfloat16"
-      extraArgs: ["--disable-log-requests", "--gpu-memory-utilization", "0.8"]
-
-    hf_token: <YOUR HF TOKEN>
+      maxModelLen: 1024
+      extraArgs: ["--disable-log-requests", "--gpu-memory-utilization", "0.4"]
 ```
 
 And deploy this configuration using Helm:
