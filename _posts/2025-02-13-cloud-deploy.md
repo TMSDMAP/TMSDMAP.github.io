@@ -252,7 +252,7 @@ sudo helm uninstall vllm
 ## Conclusion
 We have demonstrated how to set up a **vLLM Production Stack** with a GPU VM. 
 
-This is the first episode of our **Deploy LLMs in Clusters** Series. Stay tuned for multi-node deployment on Amazon EKS, serving multiple models with one cluster, LLM router deep dive, and many more! Fill this one question poll to let us know which one we should do next!
+This is the first episode of our **Deploy LLMs in Clusters** Series. Stay tuned for multi-node deployment on Amazon EKS, serving multiple models with one cluster, LLM router deep dive, and many more! Fill this one question [poll](https://forms.gle/cSeqDz1Nm2iwv7eH8) to let us know which one we should do next!
 
 
 Join us to build a future where every application can harness the power of LLM inference—reliably, at scale, and without breaking a sweat.
