@@ -1,0 +1,300 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7f7;
+  --ink: #111111;
+  --muted: #5f5f5f;
+  --line: #d8d8d8;
+  --accent: #111111;
+  --accent-soft: #ececec;
+  --link: #111111;
+  --shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    "Times New Roman", Times, "Noto Serif CJK SC", "Songti SC", SimSun, serif;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #555555;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 76px;
+  padding: 64px 0 80px;
+}
+
+.profile-panel {
+  min-width: 0;
+}
+
+.profile-sticky {
+  position: sticky;
+  top: 42px;
+}
+
+.profile-sticky h1,
+.profile-sticky .role,
+.profile-sticky .affiliation {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 2px;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.role,
+.affiliation {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.portrait {
+  width: 190px;
+  height: 190px;
+  margin: 32px auto 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  overflow: hidden;
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list a {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 13px;
+  color: var(--muted);
+  min-height: 28px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-list a:hover {
+  color: var(--ink);
+}
+
+.contact-icon {
+  width: 21px;
+  height: 21px;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-list a:nth-child(2) .contact-icon svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.disabled-link {
+  cursor: default;
+}
+
+.content {
+  min-width: 0;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+.intro p {
+  margin-bottom: 22px;
+}
+
+.section-block {
+  margin-top: 44px;
+}
+
+.section-block h2 {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  color: var(--ink);
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.section-block h2::before {
+  content: "";
+  width: 4px;
+  height: 34px;
+  background: var(--accent);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 13px;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+}
+
+.timeline time {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.entry-list p {
+  margin-bottom: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.tag-list li {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 5px 12px;
+  font-size: 0.95rem;
+}
+
+.project {
+  border-left: 2px solid var(--line);
+  padding-left: 18px;
+  margin-bottom: 22px;
+}
+
+.project h3 {
+  margin-bottom: 5px;
+  font-size: 1.08rem;
+}
+
+.project p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    width: min(100% - 28px, 680px);
+    padding: 34px 0 58px;
+  }
+
+  .profile-sticky {
+    position: static;
+  }
+
+  .portrait {
+    width: 170px;
+    height: 170px;
+    margin: 26px auto 28px;
+  }
+
+  .intro {
+    font-size: 1.08rem;
+  }
+
+  .timeline li {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .timeline time {
+    width: max-content;
+    min-width: 116px;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.05rem;
+  }
+
+  .contact-list a {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 10px;
+  }
+}
